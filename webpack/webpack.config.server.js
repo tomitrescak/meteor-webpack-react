@@ -1,6 +1,5 @@
 var path = require('path');
 var webpack = require('webpack');
-var dirs = require('../dirs');
 
 module.exports = {
   context: __dirname,
@@ -8,16 +7,16 @@ module.exports = {
   entry: [
     './lib/core-js-no-number',
     'regenerator/runtime',
-    path.join(dirs.app, 'app', 'main_server')
+    '../app/main_server',
   ],
   output: {
-    path: path.join(dirs.app, 'webpack', 'assets'),
+    path: path.join(__dirname, 'assets'),
     filename: 'server.bundle.js',
     publicPath: '/assets/',
   },
   resolve: {
     extensions: ['', '.js', '.jsx'],
-    root: path.join(dirs.app, 'app'),
+    root: path.join(__dirname, '../app'),
   },
   module: {
     loaders: [
