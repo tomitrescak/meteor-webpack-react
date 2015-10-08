@@ -39,7 +39,7 @@
   },
   "scripts": {
     "lint": "eslint app",
-    "build-core-js": "grunt --gruntfile node_modules/core-js/Gruntfile.js build:es5,es6,es7,js,web --blacklist=es6.number.constructor --path=core-js-no-number"
+    "build-core-js": "grunt --gruntfile ../node_modules/core-js/Gruntfile.js build:es5,es6,es7,js,web --blacklist=es6.number.constructor --path=core-js-no-number"
   },
   "author": "",
   "license": "MIT"
